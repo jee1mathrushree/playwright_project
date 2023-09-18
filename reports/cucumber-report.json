@@ -1,0 +1,90 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "playwright-docs;google-search",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Google Search",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 323157400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Go to the google search website \"https://www.google.com\"",
+            "match": {
+              "location": "src\\steps\\google.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1915181400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I seach \"playwright documentation\"",
+            "match": {
+              "location": "src\\steps\\google.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 115563500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see link for \"Playwright: Fast and reliable end-to-end testing for modern ...\"",
+            "match": {
+              "location": "src\\steps\\google.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 595146099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 112167800
+            },
+            "embeddings": [
+              {
+                "data": "Status: PASSED. Duration:0s",
+                "mime_type": "text/plain"
+              }
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "playwright-docs",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Playwright docs",
+    "tags": [],
+    "uri": "features\\google.feature"
+  }
+]

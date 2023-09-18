@@ -1,0 +1,58 @@
+{
+  "name": "Playwright project",
+  "version": "1.0.0",
+  "description": "project template for cucumber-js and Playwright",
+  "scripts": {
+    "build": "rimraf build && npm run format && npm run lint && tsc && npm run cucumber-check",
+    "cucumber-check": "cucumber-js features/**/*.feature --dry-run --require env/set-environment-variables.ts --require world/custom-world.ts --require step-definitions/**/*.ts --require hooks/**/*.ts  --require-module ts-node/register --format-options \"{\\\"snippetInterface\\\": \\\"async-await\\\"}\" --format summary --format progress --format progress-bar  --publish-quiet",
+    "debug": "PWDEBUG=1 DEBUG=pw:api cucumber-js",
+    "video": "PWVIDEO=1 cucumber-js",
+    "eslint-fix": "eslint ./ --ext .js,.ts,.tsx --fix",
+    "eslint-init": "eslint --init",
+    "format": "prettier --write \"**/*.{ts,tsx,css,html}\" ",
+    "lint": "eslint ./ --ext .js,.ts,.tsx --format visualstudio --no-color --report-unused-disable-directives",
+    "only": "cucumber-js --tags @ui",
+    "snippets": "cucumber-js features/**/*.feature --dry-run --format snippets",
+    "steps-usage": "cucumber-js features/**/*.feature --dry-run",
+    "all": "cucumber-js features/**/google.feature --tags @ui",
+    "test": "cucumber-js",
+    "test:parallel": "cucumber-js --parallel=2"    
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "9.4.0",
+    "@cucumber/html-formatter": "20.4.0",
+    "@cucumber/messages": "^22.0.0",
+    "@cucumber/pretty-formatter": "1.0.0",
+    "@types/fs-extra": "11.0.1",
+    "cucumber-console-formatter": "1.0.0",
+    "cucumber-html-reporter": "7.1.1",
+    "pixelmatch": "5.3.0",
+    "@playwright/test": "1.37.0",
+    "pngjs": "7.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "11.0.1",
+    "@types/expect": "24.3.0",
+    "@types/lodash": "4.14.197",
+    "@types/node": "20.5.0",
+    "@types/pixelmatch": "5.2.4",
+    "@types/pngjs": "6.0.1",
+    "@typescript-eslint/eslint-plugin": "6.4.0",
+    "@typescript-eslint/parser": "6.4.0",
+    "allure-cucumberjs": "2.5.0",
+    "eslint": "8.47.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-import": "2.28.0",
+    "eslint-plugin-prettier": "5.0.0",
+    "fs-extra": "11.1.1",
+    "open": "9.1.0",
+    "prettier": "3.0.2",
+    "rimraf": "5.0.1",
+    "standard-version": "9.5.0",
+    "ts-node": "10.9.1",
+    "typescript": "5.1.6"
+  }
+}
