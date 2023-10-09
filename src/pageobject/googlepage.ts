@@ -1,5 +1,5 @@
 import { basePage } from './basepage';
-import { locators, getAttr } from './locators/allElemenets';
+import { locators, getAttr } from './locators/allElements';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Page, expect } from '@playwright/test';
 class googlePage extends basePage {
