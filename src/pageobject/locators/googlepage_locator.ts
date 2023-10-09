@@ -1,4 +1,5 @@
-export const googlepage_locator= {
+import { LocatorType } from './types/types';
+export const googlepage_locator: LocatorType = {
   searchbox: "//*[@name='q']",
-  searchvalue: (text: string) => `//a[contains(.,'${text}')]`,
+  searchlink: (text: string[]) => `//a[contains(.,'${text[0]}')]`,
 };
